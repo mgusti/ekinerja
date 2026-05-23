@@ -1,0 +1,35 @@
+services:
+  app:
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    container_name: ekinerja-ci
+    ports:
+      - "8081:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - APACHE_RUN_USER=www-data
+      - APACHE_RUN_GROUP=www-data
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.4.21
+    container_name: ekinerja-ci-mariadb
+    ports:
+      - "3309:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-rootpassword}
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-ci3db}
+      - MYSQL_USER=${MYSQL_USER:-ci3user}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-ci3pass}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/mariadb/custom.cnf:/etc/mysql/conf.d/custom.cnf:ro
+    restart: unless-stopped
+
+volumes:
+  db_data:
+    name: ekinerja_mariadb_data

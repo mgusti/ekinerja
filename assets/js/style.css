@@ -1,0 +1,53 @@
+h1{
+    font-family: 'Trade Winds';
+    font-size: 100px;
+    color: rgb(71, 52, 52);
+    
+}
+.container{
+    width: 600px;
+    
+    margin: auto;
+    cursor: url(../img/profile/palu.png), auto;
+}
+
+.tanah{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.tanah::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 200px;
+    background: url(../img/profile/unnamed.png) bottom center no-repeat;
+    background-size: 40%;
+    position: absolute;
+    bottom: -10px;
+    
+}
+
+.ikke{
+    width: 300px;
+    height: 100px;
+    background: url(../img/profile/ikke.png) bottom center no-repeat;
+    background-size: 20%;
+    position: absolute;
+    top: 150px;
+    transition: top 0.3s;
+}
+
+.tanah.muncul .ikke{
+    top: 10px;
+}
+body{
+    background-color: rgba(163, 138, 119, 0.596);
+    
+}
+
+button{
+    display: block;
+}

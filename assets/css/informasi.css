@@ -1,0 +1,76 @@
+body {
+
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	background-repeat: repeat;
+	font-family: 'Luckiest Guy', cursive;
+
+}
+
+
+
+nav h1 {
+	color: black;
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 25pt;
+	text-shadow: rgba(128, 128, 128, 0.342) 10px 5px;
+}
+
+footer span {
+	color: white;
+}
+
+.card-title {
+	font-size: 20pt;
+	font-family: 'Luckiest Guy', cursive;
+
+}
+
+.card-body {
+	font-style: bold;
+	background-color: rgba(38, 190, 236, 0.582);
+
+
+
+}
+
+.card-body table {
+	opacity: 100%;
+	font-style: bold;
+	font-size: 14pt;
+
+
+}
+
+.card {
+
+	box-shadow: rgba(190, 189, 189, 0.61) 10px 10px;
+}
+
+#gambar1 {
+	width: 80px;
+}
+
+#gambar2 {
+	width: 70px;
+}
+
+#gambar3 {
+	width: 200px;
+}
+
+marquee {
+	color: rgba(255, 0, 0, 0.623);
+	font-size: 14pt;
+
+}
+
+#kelas {
+	font-family: 'Luckiest Guy', cursive;
+}
+
+#harga {
+	font-family: 'Bungee Inline', cursive;
+}
